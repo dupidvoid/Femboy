@@ -5,3 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Little Femboy | Femboy </title>
     <style>
+        :root{
+  --yellow:#ffd21c; --yellow2:#ffdf55; --dark:#202020; --grey:#666;
+  --light:#f4f4f4; --white:#fff; --border:#ddd;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:var(--light);line-height:1.55}
+a{color:inherit}
+.topbar{position:relative;min-height:104px;overflow:hidden;background:var(--yellow);display:flex;align-items:center;padding:18px 5%;isolation:isolate}
+.topbar:before{content:"";position:absolute;inset:0;background:rgba(90,90,90,.75);z-index:-1}
+.brand{position:relative;z-index:3;color:#fff;text-shadow:0 2px 3px #0005}
+.brand b{display:block;font-size:clamp(30px,5vw,48px);line-height:.95}
+.brand span{display:block;font-size:clamp(10px,1.4vw,15px);font-weight:700;letter-spacing:.5px;margin-top:6px}
+.nav{margin-left:auto;display:flex;gap:22px;position:relative;z-index:3}
+.nav a{color:#fff;text-decoration:none;font-weight:700;font-size:14px}
+.nav a:hover{color:var(--yellow2)}
+.camera-field{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.camera{position:absolute;width:38px;height:27px;opacity:.95;animation:fly linear infinite}
+.cam-body{position:absolute;left:0;top:5px;width:38px;height:24px;border:3px solid #fff;border-radius:5px}
+.cam-lens{position:absolute;left:13px;top:11px;width:13px;height:13px;border:3px solid #fff;border-radius:50%}
+.cam-top{position:absolute;left:6px;top:0;width:13px;height:6px;border:3px solid #fff;border-bottom:0;border-radius:3px 3px 0 0}
+@keyframes fly{from{transform:translate(-70px,125px) rotate(-45deg)}to{transform:translate(calc(100vw + 100px),-125px) rotate(-45deg)}}
+.camera:nth-child(1){animation-duration:20s;animation-delay:-2s}.camera:nth-child(2){animation-duration:25s;animation-delay:-12s;scale:.7}
+.camera:nth-child(3){animation-duration:22s;animation-delay:-8s;scale:1.15}.camera:nth-child(4){animation-duration:28s;animation-delay:-20s;scale:.65}
+.camera:nth-child(5){animation-duration:23s;animation-delay:-16s;scale:.85}.camera:nth-child(6){animation-duration:26s;animation-delay:-5s;scale:.75}
+.hero{background:#fff;padding:90px 5% 85px;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.eyebrow{font-weight:800;color:#7a6500;text-transform:uppercase;letter-spacing:2px;font-size:13px}
+.hero h1{font-size:clamp(42px,7vw,76px);line-height:.98;margin:12px 0 20px}
+.hero h1 em{font-style:normal;text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:10px;text-underline-offset:4px}
+.hero p{font-size:18px;color:#555;max-width:650px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:14px 20px;border-radius:10px;text-decoration:none;font-weight:800;border:2px solid var(--dark);cursor:pointer}
+.btn.primary{background:var(--yellow);border-color:var(--yellow)}
+.btn.secondary{background:#fff}
+.preview{background:#666;border-radius:24px;padding:16px;box-shadow:0 18px 45px #0002}
+.photo-frame{height:330px;border-radius:15px;background:linear-gradient(135deg,#888,#333);display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:25px}
+.photo-frame div{font-size:28px;font-weight:800}
+section{padding:75px 5%}
+.section-head{text-align:center;max-width:700px;margin:0 auto 40px}
+.section-head h2{font-size:clamp(30px,5vw,48px);margin-bottom:10px}
+.section-head p{color:#666}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1100px;margin:auto}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:28px;position:relative}
+.card.featured{border:3px solid var(--yellow);padding:26px}
+.badge{position:absolute;right:18px;top:18px;background:var(--yellow);padding:5px 9px;border-radius:99px;font-size:11px;font-weight:900}
+.card h3{font-size:25px;margin-bottom:7px}.price{font-size:38px;font-weight:900;margin:15px 0}
+.card ul{list-style:none;margin:18px 0 25px;color:#555}.card li{margin:9px 0}.card li:before{content:"✓";font-weight:900;margin-right:8px;color:#806900}
+.process{background:#222;color:#fff}.process .section-head p{color:#bbb}.process .section-head h2{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1100px;margin:auto}
+.step{padding:25px;border:1px solid #ffffff25;border-radius:16px;background:#ffffff08}
+.step strong{display:block;font-size:32px;color:var(--yellow);margin-bottom:10px}
+.order{background:#fff}.form{max-width:850px;margin:auto;background:#f7f7f7;border:1px solid var(--border);padding:30px;border-radius:20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-weight:800;font-size:14px;display:block;margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 14px;border:1px solid #bbb;border-radius:9px;font:inherit;background:#fff}
+textarea{min-height:130px;resize:vertical}.full{grid-column:1/-1}
+.notice{margin-top:16px;padding:14px;border-radius:10px;background:#fff6c7;border:1px solid #ead57a;font-size:13px}
+.form button{margin-top:18px;border:0}
+.faq{max-width:850px;margin:auto}.faq details{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin:10px 0}.faq summary{font-weight:800;cursor:pointer}
+.contact{background:#eee}.contact-box{max-width:900px;margin:auto;text-align:center}.email{display:inline-block;margin-top:18px;font-size:18px;font-weight:800;color:#705c00}
+footer{background:#171717;color:#ccc;padding:35px 5%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer strong{color:#fff}footer a{color:#ccc}
+@media(max-width:800px){
+ .hero{grid-template-columns:1fr;padding-top:60px}.cards,.steps{grid-template-columns:1fr}
+ .nav{display:none}.grid{grid-template-columns:1fr}.full{grid-column:auto}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.camera{animation:none}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="camera-field" aria-hidden="true">
+    <div class="camera"><i class="cam-top"></i><i class="cam-body"></i><i class="cam-lens"></i></div>
+    <div class="camera"><i class="cam-top"></i><i class="cam-body"></i><i class="cam-lens"></i></div>
+    <div class="camera"><i class="cam-top"></i><i class="cam-body"></i><i class="cam-lens"></i></div>
+    <div class="camera"><i class="cam-top"></i><i class="cam-body"></i><i class="cam-lens"></i></div>
+    <div class="camera"><i class="cam-top"></i><i class="cam-body"></i><i class="cam-lens"></i></div>
+    <div class="camera"><i class="cam-top"></i><i class="cam-body"></i><i class="cam-lens"></i></div>
+  </div>
+  <div class="brand"><b>FEMBOY</b><span>My Little Femboy</span></div>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#home">Home</a><a href="#services">Services</a><a href="#how">How it works</a>
+    <a href="#order">Order</a><a href="#faq">FAQ</a>
+  </nav>
+<a class="btn btn-primary" href="https://discord.gg/zqaEf7Bjx" target="_blank" rel="noopener noreferrer">Join Discord</a><\n></header>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <div class="eyebrow">Need a Femboy?</div>
+    <h1>We love femboys on this <em>website.</em></h1>
+    <p>Need a femboy? Hit me up.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#order">Start an order</a>
+      <a class="btn secondary" href="#services">View services</a>
+    </div>
+  </div>
+  <div class="preview"><div class="photo-frame"><div>YOUR FEMBOY<br>+<br>OUR KITTEN :3</div></div></div>
+</section>
