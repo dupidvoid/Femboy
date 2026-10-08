@@ -105,3 +105,40 @@ footer strong{color:#fff}footer a{color:#ccc}
   </div>
   <div class="preview"><div class="photo-frame"><div>YOUR FEMBOY<br>+<br>OUR KITTEN :3</div></div></div>
 </section>
+<section id="order"><div class="container">
+  <div class="section-head"><div class="eyebrow">ORDER GUIDE</div><h2>Start your order.</h2><p>This website helps you choose your package. The official form and photo submission happen inside your ticket.</p></div>
+  <div class="order">
+    <form id="guideForm">
+      <div class="formgrid">
+        <div><label for="name">Name</label><input id="name" required placeholder="Your name"></div>
+        <div><label for="package">Package</label><select id="package" required><option value="">Choose...</option><option>Basic Edit — 1 Boost</option><option>Standard Edit — 2 Boosts</option><option>Premium Edit — 3 Boosts</option></select></div>
+        <div class="full"><label for="request">What do you want edited?</label><textarea id="request" required placeholder="Briefly describe your edit..."></textarea></div>
+      </div>
+      <div class="actions"><button class="btn" type="submit">Continue to Discord</button></div>
+      <div id="status" class="status" hidden></div>
+    </form>
+  </div>
+</div></section>
+
+<section id="faq"><div class="container">
+  <div class="section-head"><div class="eyebrow">FAQ</div><h2>Before you order.</h2></div>
+  <div class="grid">
+    <div class="faq"><h3>How do I pay?</h3><p>You pay by boosting the DPES server with the number of Boosts required by your chosen package.</p></div>
+    <div class="faq"><h3>Where do I send my photos?</h3><p>After boosting, open your DPES order ticket and send your photos inside the ticket.</p></div>
+    <div class="faq"><h3>What if I have a complaint?</h3><p>Email <a href="mailto:dinglescomplaintsline@gmail.com">dinglescomplaintsline@gmail.com</a>.</p></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="container">© <span id="year"></span> DPES — Dingles Photo Editing Services • Halloween Edition</div></footer>
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("guideForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ document.getElementById("status").hidden=false;
+ document.getElementById("status").textContent="Next: BUY YOUR FEMBOY, then open a DPES order ticket and complete the official form there.";
+ window.open("https://discord.gg/zqaEf7Bjx","_blank","noopener,noreferrer");
+});
+</script>
+</body>
+</html>
